@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/four_background">
+
+        <TextView
+            android:id="@+id/TVHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Masukan Pesanan Anda"
+            android:textAllCaps="false"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/color_black"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="20sp"
+            android:padding="4dp"
+            android:layout_margin="4dp"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/TVHeading">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextInputEditTextTheme"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:hint="Masukan Nama Makanan"
+                android:textColorHint="@color/color_black"
+                app:hintTextColor="@color/color_black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EditItemName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:inputType="text"
+                    android:textColorHint="@color/color_black"
+                    android:textColor="@color/color_black"
+                    android:textSize="14sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextInputEditTextTheme"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:hint="Masukan Qty "
+                android:textColorHint="@color/color_black"
+                app:hintTextColor="@color/color_black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EditItemQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:textColorHint="@color/color_black"
+                    android:textColor="@color/color_black"
+                    android:textSize="14sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/TextInputEditTextTheme"
+                android:layout_margin="5dp"
+                android:padding="5dp"
+                android:hint="Masukan Harga Makanan"
+                android:textColorHint="@color/color_black"
+                app:hintTextColor="@color/color_black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/EditItemPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:inputType="number"
+                    android:textColorHint="@color/color_black"
+                    android:textColor="@color/color_black"
+                    android:textSize="14sp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:layout_weight="2">
+
+                <Button
+                    android:id="@+id/BtnCancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:background="@drawable/custom_button"/>
+
+                <Button
+                    android:id="@+id/BtnAdd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="8dp"
+                    android:text="Add"
+                    android:textAllCaps="false"
+                    android:background="@drawable/custom_button"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

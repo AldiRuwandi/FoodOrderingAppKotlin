@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/four_background"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="4dp">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <LinearLayout
+            android:id="@+id/idLL1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/TVItemName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Nama Makanan"
+                android:textColor="@color/color_black"
+                android:padding="4dp"
+                android:layout_margin="3dp"
+                android:fontFamily="@font/poppins_medium"/>
+            
+            <TextView
+                android:id="@+id/TVQuantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Quantity"
+                android:textColor="@color/color_black"
+                android:padding="4dp"
+                android:layout_margin="3dp"
+                android:fontFamily="@font/poppins_medium"/>
+            
+            <TextView
+                android:id="@+id/TVRate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:text="Rate"
+                android:textColor="@color/color_black"
+                android:padding="4dp"
+                android:layout_margin="3dp"
+                android:fontFamily="@font/poppins_medium"/>
+            
+            <ImageView
+                android:id="@+id/IVDelete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:padding="4dp"
+                android:src="@drawable/ic_delete"
+                android:layout_margin="3dp"
+                app:tint="@color/color_black"/>
+
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/TVHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Bayar"
+            android:layout_below="@id/idLL1"
+            android:textColor="@color/color_black"
+            android:layout_margin="3dp"
+            android:padding="4dp"
+            android:fontFamily="@font/poppins_medium"/>
+        
+        <TextView
+            android:id="@+id/TVTotalUang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_black"
+            android:layout_below="@id/idLL1"
+            android:layout_alignParentEnd="true"
+            android:text="Total"
+            android:padding="4dp"
+            android:layout_margin="3dp"
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/poppins_medium"/>
+
+        <TextView
+            android:id="@+id/TVTimeStamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TimeStamp"
+            android:textColor="@color/color_black"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_below="@id/TVTotalUang"
+            android:padding="4dp"
+            android:layout_margin="3dp"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
