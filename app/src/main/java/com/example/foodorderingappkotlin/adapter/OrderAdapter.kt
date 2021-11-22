@@ -9,9 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.foodorderingappkotlin.R
 import com.example.foodorderingappkotlin.model.OrderItems
 
-class OrderAdapter(var list: ArrayList<OrderItems>, val orderItemClickInterface: OrderItemClickInterface): RecyclerView.Adapter<OrderAdapter.OrderViewHolder>() {
-
-    private val allOrders= ArrayList<OrderItems>()
+class OrderAdapter(var list: List<OrderItems>, val orderItemClickInterface: OrderItemClickInterface): RecyclerView.Adapter<OrderAdapter.OrderViewHolder>() {
 
     inner class OrderViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 

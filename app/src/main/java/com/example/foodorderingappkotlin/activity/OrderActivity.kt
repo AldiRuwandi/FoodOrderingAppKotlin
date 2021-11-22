@@ -24,10 +24,9 @@ class OrderActivity : AppCompatActivity(), OrderAdapter.OrderItemClickInterface 
 
     lateinit var itemsRV: RecyclerView
     lateinit var addFAB: FloatingActionButton
-    lateinit var list: ArrayList<OrderItems>
+    lateinit var list: List<OrderItems>
     lateinit var orderAdapter: OrderAdapter
     lateinit var orderViewModel: OrderViewModel
-    var orderID = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +42,7 @@ class OrderActivity : AppCompatActivity(), OrderAdapter.OrderItemClickInterface 
         val factory = OrderViewModelFactory(orderRepository)
         orderViewModel = ViewModelProvider(this, factory).get(OrderViewModel::class.java)
         orderViewModel.getAllOrderItems().observe(this, Observer {
-            orderAdapter.list = it as ArrayList<OrderItems>
+            orderAdapter.list = it
             orderAdapter.notifyDataSetChanged()
         })
 
@@ -74,7 +73,6 @@ class OrderActivity : AppCompatActivity(), OrderAdapter.OrderItemClickInterface 
                 val sdf = SimpleDateFormat("dd MMM, yyyy - HH:mm")
                 val currentDate: String = sdf.format(Date())
                 val items = OrderItems(itemName, qty, pr, currentDate)
-                items.id = orderID
                 orderViewModel.insert(items)
                 Toast.makeText(applicationContext, "Item Inserted...", Toast.LENGTH_SHORT).show()
                 dialog.dismiss()
